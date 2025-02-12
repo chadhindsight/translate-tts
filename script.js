@@ -17,8 +17,11 @@ function loadVoices(){
 speechSynthesis.onvoiceschanged = loadVoices;
 loadVoices();
 
-// Play the TTS by adding an event listener
+// Play TTS by adding an event listener
 playButton.addEventListener('click', ()=>{
     const utterance = new SpeechSynthesisUtterance(textInput.value);
+    speechSynthesis.speak(utterance);
+    const selectedVoice = voices[voiceSelect.value];
+    if(selectedVoice) {utterance.voice = selectedVoice};
     speechSynthesis.speak(utterance);
 })
