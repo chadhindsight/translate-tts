@@ -2,6 +2,9 @@ const voiceSelect = document.querySelector('#voiceSelect');
 const playButton = document.querySelector('#playButton');
 const textInput = document.querySelector('textarea');
 
+// supported languages
+const languages = []
+
 // Load available voices
 let voices = []
 function loadVoices(){
