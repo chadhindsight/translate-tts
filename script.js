@@ -8,10 +8,9 @@ function loadVoices(){
     voices = speechSynthesis.getVoices();
 
     voiceSelect.innerHTML = voices.map(
-        (voice, index) =>{
+        (voice, index) =>
             `<option value="${index}">${voice.name}(${voice.lang})</option>`
-        }
-    ).join('')
+    ).join('');
 }
 
 // Load voices when they're available 
