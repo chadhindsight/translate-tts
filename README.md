@@ -1,7 +1,7 @@
 # TTS & Translate App
 
 ## Description
-This is a JavaScript web application that allows users to input text and convert it into speech (TTS).Based on [Brad Traversy's Youtube Tutorial](https://www.youtube.com/watch?v=V0P3Opf-zUs&t=1104s) Additionally, users can select a language to translate the text before it is spoken. The project utilizes serverless functions for translation and API key security.
+This is a JavaScript web application that allows users to input text and convert it into speech (TTS).Based on [Brad Traversy's Youtube Tutorial](https://www.youtube.com/watch?v=V0P3Opf-zUs&t=1104s). Additionally, users can select a language to translate the text before it is spoken. The project utilizes serverless functions for translation and API key security.
 
 ## Technologies Used
 
