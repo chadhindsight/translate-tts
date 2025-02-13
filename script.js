@@ -2,6 +2,18 @@ const voiceSelect = document.querySelector('#voiceSelect');
 const playButton = document.querySelector('#playButton');
 const textInput = document.querySelector('textarea');
 
+// Array of supported languages with their ISO codes
+const languages = [
+    { code: 'en', name: 'English' },
+    { code: 'es', name: 'Spanish' },
+    { code: 'fr', name: 'French' },
+    { code: 'de', name: 'German' },
+    { code: 'it', name: 'Italian' },
+    { code: 'it', name: 'Italian' },
+    { code: 'pt-BR', name: 'Portuguese (Brazil)' },
+    { code: 'pt-PT', name: 'Portuguese (Portugal)' }
+  ];
+
 // Load available voices
 let voices = []
 function loadVoices(){
