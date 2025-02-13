@@ -27,7 +27,7 @@ This is a JavaScript web application that allows users to input text and convert
 
 Installation & Setup
 
-Clone the repository:
+### Clone the repository:
 
 1. ``` git clone https://github.com/YOUR_GITHUB_USERNAME/tts-translate-app.git ```
 
@@ -35,11 +35,11 @@ Clone the repository:
 
 ``` cd tts-translate-app```
 
-Install dependencies (if applicable):
+### Install dependencies (if applicable):
 
 ``` npm install ```
 
-Set up API keys:
+### Set up API keys:
 
 - Obtain an API key for [Google Translate](https://cloud.google.com/translate/docs/setup).
 
@@ -55,7 +55,7 @@ To deploy the app using Vercel:
 
 ``` vercel --prod ```
 
-Usage
+### Usage
 
 1. Enter text into the input field.
 
@@ -63,10 +63,10 @@ Usage
 
 3. Click the "Translate & Speak" button to hear the translated text spoken out loud.
 
-License
+### License
 
 This project is licensed under the MIT License.
 
-Author
+### Author
 
 [Chad Hinds] - [https://github.com/chadhindsight]
