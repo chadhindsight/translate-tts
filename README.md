@@ -49,7 +49,7 @@ Installation & Setup
 
 ``` vercel dev ```
 
-Deployment
+#### Deployment
 
 To deploy the app using Vercel:
 
