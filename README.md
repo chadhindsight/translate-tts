@@ -29,7 +29,7 @@ Installation & Setup
 
 ### Clone the repository:
 
-1. ``` git clone https://github.com/YOUR_GITHUB_USERNAME/tts-translate-app.git ```
+1. ``` git clone https://github.com/chadhindsight/tts-translate-app.git ```
 
 2. Navigate into the project directory:
 
