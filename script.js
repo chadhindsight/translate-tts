@@ -2,6 +2,7 @@ const voiceSelect = document.querySelector('#voiceSelect');
 const playButton = document.querySelector('#playButton');
 const textInput = document.querySelector('textarea');
 const languageSelect = document.querySelector("#languageSelect")
+
 // Array of supported languages with their ISO codes
 const languages = [
     { code: 'en', name: 'English' },
@@ -9,12 +10,20 @@ const languages = [
     { code: 'fr', name: 'French' },
     { code: 'de', name: 'German' },
     { code: 'it', name: 'Italian' },
-    { code: 'it', name: 'Italian' },
+    { code: 'ja', name: 'Japan' },
+    { code: 'ko', name: 'Korean' },
+    {code: 'zh-CN', name: 'Chinese(Simplified)'},
     { code: 'pt-BR', name: 'Portuguese (Brazil)' },
     { code: 'pt-PT', name: 'Portuguese (Portugal)' }
   ];
 
 
+languages.forEach(({code, name})=>{
+    const option = document.createElement('option');
+    option.value = code;
+    option.textContent = name;
+    languageSelect.appendChild(option)
+})
 
 // Load available voices
 let voices = []
