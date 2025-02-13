@@ -47,7 +47,7 @@ Installation & Setup
 
 - Start the development server:
 
-vercel dev
+``` vercel dev ```
 
 Deployment
 
