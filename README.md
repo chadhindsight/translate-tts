@@ -1,7 +1,7 @@
 # TTS & Translate App
 
 ## Description
-This is a JavaScript web application that allows users to input text and convert it into speech (TTS).Based on [Brad Traversy's Youtube Tutorial](https://www.youtube.com/watch?v=V0P3Opf-zUs&t=1104s). The tutorial video uses google translate API, but this project usesthis version uses the MyMemory Translation API instead as it does not required a paid API key. instead. Additionally, users can select a language to translate the text before it is spoken. The project utilizes serverless functions for translation and API key security.
+This is a JavaScript web application that allows users to input text and convert it into speech (TTS).Based on [Brad Traversy's Youtube Tutorial](https://www.youtube.com/watch?v=V0P3Opf-zUs&t=1104s). The tutorial video uses google translate API, but this project usesthis version uses the MyMemory Translation API instead as it does not required a paid API key. instead. Additionally, users can select a language to translate the text before it is spoken. 
 
 ## Technologies Used
 
@@ -11,7 +11,7 @@ This is a JavaScript web application that allows users to input text and convert
  
 - LibreTranslate Translate API (For text translation)
  
-- Vercel CLI (For deploying serverless functions)
+- Vercel
  
 - Tailwind CSS (For styling)
 
@@ -21,9 +21,7 @@ This is a JavaScript web application that allows users to input text and convert
 
 2. Translate text into a selected language before speech output.
 
-3. Secure API requests using serverless functions.
-
-4. Minimalist and responsive UI with Tailwind CSS.
+3. Minimalist and responsive UI with Tailwind CSS.
 
 Installation & Setup
 
