@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { code: 'pt-PT', name: 'Portuguese (Portugal)' }
     ];
 
-    // Populate language dropdown
+    // Populate the language dropdown
     languages.forEach(({ code, name }) => {
         const option = document.createElement('option');
         option.value = code;
@@ -35,8 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .map((voice, index) => `<option value="${index}">${voice.name} (${voice.lang})</option>`)
             .join('');
     }
-
-    // Load voices when they're available
     speechSynthesis.onvoiceschanged = loadVoices;
     loadVoices();
 
@@ -51,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            // Translate the text
+
             const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|${targetLang}`);
             const data = await res.json();
             const translatedText = data.responseData.translatedText;
