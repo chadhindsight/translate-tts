@@ -1,0 +1,14 @@
+{
+  "name": "translate-tts",
+  "version": "1.0.0",
+  "description": "A translation web app based on Brad Travery's tutorial video",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chad Hinds",
+  "license": "ISC",
+  "dependencies": {
+    "google-translate-api-x": "^10.7.2"
+  }
+}
