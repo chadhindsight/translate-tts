@@ -3,7 +3,8 @@ const voiceSelect = document.querySelector('#voiceSelect');
 const playButton = document.querySelector('#playButton');
 const textInput = document.querySelector('textarea');
 const languageSelect = document.querySelector("#languageSelect")
-
+const translateButton = document.querySelector('#translateButton');
+const translationResult = document.createElement('div'); // Create a div to display the translation
 // Array of supported languages with their ISO codes
 const languages = [
     { code: 'en', name: 'English' },
