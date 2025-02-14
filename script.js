@@ -1,3 +1,4 @@
+const translate = require('google-translate-api-x');
 const voiceSelect = document.querySelector('#voiceSelect');
 const playButton = document.querySelector('#playButton');
 const textInput = document.querySelector('textarea');
