@@ -1,7 +1,7 @@
 # TTS & Translate App
 
 ## Description
-This is a JavaScript web application that allows users to input text and convert it into speech (TTS).Based on [Brad Traversy's Youtube Tutorial](https://www.youtube.com/watch?v=V0P3Opf-zUs&t=1104s). The tutorial video uses google translate API, but this project usesthis version uses the MyMemory Translation API instead as it does not required a paid API key. instead. Additionally, users can select a language to translate the text before it is spoken. 
+This is a JavaScript web application that allows users to input text and convert it into speech (TTS).Based on [Brad Traversy's Youtube Tutorial](https://www.youtube.com/watch?v=V0P3Opf-zUs&t=1104s). The tutorial video uses google translate API, but this project usesthis version uses the MyMemory Translation API instead as it does not required a paid API key.  Additionally, users can select a language to translate the text before it is spoken. 
 
 ## Technologies Used
 
