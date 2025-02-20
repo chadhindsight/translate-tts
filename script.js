@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageSelect = document.querySelector('#languageSelect');
     const translateButton = document.querySelector('#translateButton');
     const translationResult = document.querySelector('#translationResult');
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const appContainer = document.querySelector('.bg-white');
+    const darkModeText = document.getElementById('dark-mode-text');
+    const labelElements = document.querySelectorAll('label');
 
     // Array of supported languages
     const languages = [
@@ -70,4 +74,51 @@ document.addEventListener('DOMContentLoaded', () => {
             translationResult.textContent = 'Translation failed. Please try again.';
         }
     });
+
+    // Dark mode logic
+    function updateDarkMode() {
+        if (document.documentElement.classList.contains('dark')) {
+            // Update UI elements for dark mode
+            appContainer.classList.add('bg-gray-800', 'text-white');
+            appContainer.classList.remove('bg-white');
+            darkModeText.classList.add('text-white');
+            darkModeText.classList.remove('text-gray-800');
+            textInput.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
+            languageSelect.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
+            voiceSelect.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
+            translationResult.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
+            labelElements.forEach(label => {
+                label.classList.add('text-gray-300');
+                label.classList.remove('text-gray-700');
+            });
+            console.log(darkModeText.classList)
+        } else {
+            // Reset to light mode
+            appContainer.classList.remove('bg-gray-800', 'text-white');
+            appContainer.classList.add('bg-white');
+            darkModeText.classList.remove('text-white');
+            darkModeText.classList.add('text-gray-800');
+            textInput.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
+            languageSelect.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
+            voiceSelect.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
+            translationResult.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
+            labelElements.forEach(label => {
+                label.classList.remove('text-gray-300');
+                label.classList.add('text-gray-700');
+            });
+        }
+    }
+    
+    darkModeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        
+        // Save the user's preference in localStorage
+        localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+        
+        // Update UI elements
+        updateDarkMode();
+    });
+    
+    // Initial UI update based on current mode
+    updateDarkMode();
 });
