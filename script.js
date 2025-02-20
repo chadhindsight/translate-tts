@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     darkModeToggle.addEventListener('click', () => {
-        // Toggle dark mode on html element (for Tailwind dark variants)
         document.documentElement.classList.toggle('dark');
         
         // Save the user's preference in localStorage
