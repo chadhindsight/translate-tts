@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageSelect = document.querySelector('#languageSelect');
     const translateButton = document.querySelector('#translateButton');
     const translationResult = document.querySelector('#translationResult');
+    const dMode = document.getElementById("dark-mode-text");
 
     // Array of supported languages
     const languages = [
@@ -70,4 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             translationResult.textContent = 'Translation failed. Please try again.';
         }
     });
+
+    // Dark mode logic
+    
 });
