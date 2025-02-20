@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translationResult = document.querySelector('#translationResult');
     const darkModeToggle = document.getElementById("darkModeToggle");
     const appContainer = document.querySelector('.bg-white');
-    const appTitle = document.getElementById('dark-mode-text');
+    const darkModeText = document.getElementById('dark-mode-text');
     const labelElements = document.querySelectorAll('label');
 
     // Array of supported languages
@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update UI elements for dark mode
             appContainer.classList.add('bg-gray-800', 'text-white');
             appContainer.classList.remove('bg-white');
-            appTitle.classList.add('text-white');
-            appTitle.classList.remove('text-gray-800');
+            darkModeText.classList.add('text-white');
+            darkModeText.classList.remove('text-gray-800');
             textInput.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
             languageSelect.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
             voiceSelect.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
@@ -91,12 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 label.classList.add('text-gray-300');
                 label.classList.remove('text-gray-700');
             });
+            console.log(darkModeText.classList)
         } else {
             // Reset to light mode
             appContainer.classList.remove('bg-gray-800', 'text-white');
             appContainer.classList.add('bg-white');
-            appTitle.classList.remove('text-white');
-            appTitle.classList.add('text-gray-800');
+            darkModeText.classList.remove('text-white');
+            darkModeText.classList.add('text-gray-800');
             textInput.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
             languageSelect.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
             voiceSelect.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
