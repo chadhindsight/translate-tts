@@ -8,7 +8,7 @@
     <title>Chad's TTS & Translation App</title>
     
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
+<body class="bg-gray-100 flex items-center justify-center h-screen dark:bg-gray-900">
        <!-- Dark Mode Toggle Button -->
        <button
        id="darkModeToggle"
@@ -66,6 +66,11 @@
             <!-- Translated text will appear here -->
         </div>
     </div>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageSelect = document.querySelector('#languageSelect');
     const translateButton = document.querySelector('#translateButton');
     const translationResult = document.querySelector('#translationResult');
-    const dMode = document.getElementById("dark-mode-text");
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const appContainer = document.querySelector('.bg-white');
+    const appTitle = document.getElementById('dark-mode-text');
+    const labelElements = document.querySelectorAll('label');
 
     // Array of supported languages
     const languages = [
@@ -73,5 +76,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Dark mode logic
+    function updateDarkMode() {
+        if (document.documentElement.classList.contains('dark')) {
+            // Update UI elements for dark mode
+            appContainer.classList.add('bg-gray-800', 'text-white');
+            appContainer.classList.remove('bg-white');
+            appTitle.classList.add('text-white');
+            appTitle.classList.remove('text-gray-800');
+            textInput.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
+            languageSelect.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
+            voiceSelect.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
+            translationResult.classList.add('bg-gray-700', 'text-white', 'border-gray-600');
+            labelElements.forEach(label => {
+                label.classList.add('text-gray-300');
+                label.classList.remove('text-gray-700');
+            });
+        } else {
+            // Reset to light mode
+            appContainer.classList.remove('bg-gray-800', 'text-white');
+            appContainer.classList.add('bg-white');
+            appTitle.classList.remove('text-white');
+            appTitle.classList.add('text-gray-800');
+            textInput.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
+            languageSelect.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
+            voiceSelect.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
+            translationResult.classList.remove('bg-gray-700', 'text-white', 'border-gray-600');
+            labelElements.forEach(label => {
+                label.classList.remove('text-gray-300');
+                label.classList.add('text-gray-700');
+            });
+        }
+    }
     
+    darkModeToggle.addEventListener('click', () => {
+        // Toggle dark mode on html element (for Tailwind dark variants)
+        document.documentElement.classList.toggle('dark');
+        
+        // Save the user's preference in localStorage
+        localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+        
+        // Update UI elements
+        updateDarkMode();
+    });
+    
+    // Initial UI update based on current mode
+    updateDarkMode();
 });
